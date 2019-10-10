@@ -1,0 +1,23 @@
+<div class="card">
+  <div class="card-header"><strong>Products</strong></div>
+  <div class="card-body">
+
+    <p-accordion>
+      <p-accordionTab *ngFor="let category of categories" header="{{category.productCategoryName}}"
+        (click)="loadProcucts(category.productCategoryId)">
+        <div *ngFor="let product of productList">
+          <button class="button" [routerLink]="['/product-detail',product.productId]"><span>{{product.productName}}
+            </span></button>
+        </div>
+        <!-- <button class="button"><span>Product-2 </span></button><br> -->
+      </p-accordionTab>
+      <!-- <p-accordionTab header="Header 2">
+        Content 2
+      </p-accordionTab>
+      <p-accordionTab header="Header 3">
+        Content 3
+      </p-accordionTab> -->
+    </p-accordion>
+  </div>
+</div>
+<br><br><br><br>

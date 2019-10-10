@@ -1,0 +1,18 @@
+<h3>Upload File</h3>
+<br><br>
+
+<!-- <p-fileUpload #fubauto mode="basic" name="demo[]" accept="image/*" maxFileSize="1000000"
+  (change)="onBasicUploadAuto($event)" [auto]="true" chooseLabel="Browse"></p-fileUpload> -->
+
+<div class="row">
+  <div class="col-sm-9">
+    <app-alert [visible]="isUploadSuccess" [type]="alertType" [msg]="alertMsg" (alertCloseEvent)="closeAlert()">
+    </app-alert>
+
+    <input type="file" (change)="fileChange($event)" name="file" />
+  </div>
+  <div class="col-sm-3">
+    <button type="button" class="btn btn-outline-success" routerLink="/product">Back</button>
+  </div>
+</div>
+<br><br><br><br><br>

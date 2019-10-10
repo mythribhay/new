@@ -1,0 +1,26 @@
+<!-- Application Header -->
+<app-header [title]="title"></app-header>
+
+<!-- Application Main Container -->
+<main role="main" class="container" style="margin-top:80px">
+  <div class="row">
+    <div class="col-sm-3">
+      <div class="card">
+        <div class="card-header"><strong>Menu</strong></div>
+        <div class="card-body">
+          <ul>
+            <li>Our Offerings</li>
+            <li>Contact Us</li>
+            <li routerLink="/upload">Upload FIle</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-9">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</main>
+
+<!-- APplication Footer -->
+<app-footer></app-footer>
